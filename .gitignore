@@ -1,0 +1,3 @@
+# OSTree working files, not part of the published repository
+repo/tmp/
+repo/.lock
