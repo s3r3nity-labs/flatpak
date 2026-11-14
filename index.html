@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>s3r3nity-labs Flatpak apps</title>
+  <link rel="icon" href="labs-icon.svg" type="image/svg+xml">
+  <style>
+    :root { --bg: #f7f7f5; --card: #fff; --text: #1e2122; --muted: #5f6668; --border: #e3e3e0; --accent: #c22d6f; --code: #eeeeeb; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f1112; --card: #1a1d1e; --text: #ececea; --muted: #a2a8a9; --border: #2c3031; --accent: #e0558f; --code: #24282a; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+    header { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
+    header img { width: 48px; height: 48px; }
+    h1 { font-size: 1.6rem; margin: 0; }
+    .muted { color: var(--muted); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-bottom: 20px; }
+    .app { display: flex; gap: 18px; align-items: flex-start; }
+    .app img { width: 72px; height: 72px; flex: none; }
+    h2 { margin: 0 0 4px; font-size: 1.25rem; }
+    .button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 9px 16px; border-radius: 9px; font-weight: 600; margin: 12px 8px 0 0; }
+    .button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    pre { background: var(--code); border-radius: 9px; padding: 12px 14px; overflow-x: auto; font-size: 0.88rem; }
+    code { font-family: ui-monospace, monospace; }
+    h3 { font-size: 1rem; margin: 22px 0 6px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="labs-icon.svg" alt="">
+    <div>
+      <h1>s3r3nity-labs</h1>
+      <div class="muted">Flatpak apps, with automatic updates</div>
+    </div>
+  </header>
+
+  <section class="card app">
+    <img src="home-sync-icon.svg" alt="">
+    <div>
+      <h2>Home Sync</h2>
+      <div class="muted">Keep your folders in your cloud (Nextcloud, Dropbox, …), the same on all your computers.</div>
+      <a class="button" href="org.s3r3nity.HomeSync.flatpakref">Install Home Sync</a>
+      <a class="button secondary" href="https://github.com/s3r3nity-labs/linux-home-cloud-storage-sync">Source code</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Installing</h3>
+    <p class="muted">Click <strong>Install Home Sync</strong> and open the downloaded file. Your app store
+      (Discover, GNOME Software, …) installs it and adds this repository, so updates arrive
+      with your other apps. Or in a terminal:</p>
+    <pre><code>flatpak install --user https://s3r3nity-labs.github.io/flatpak/org.s3r3nity.HomeSync.flatpakref</code></pre>
+
+    <h3>Adding the repository only</h3>
+    <pre><code>flatpak remote-add --user --if-not-exists s3r3nity-labs https://s3r3nity-labs.github.io/flatpak/s3r3nity-labs.flatpakrepo</code></pre>
+
+    <h3>Removing</h3>
+    <pre><code>flatpak uninstall --user org.s3r3nity.HomeSync
+flatpak remote-delete --user s3r3nity-labs</code></pre>
+
+    <p class="muted">The repository is signed (key fingerprint
+      <code>DA8B 9C3E E876 F9AF B53D 4D4A 0424 DDA6 99CD 08FE</code>). Runtimes come from Flathub.</p>
+  </section>
+</main>
+</body>
+</html>
