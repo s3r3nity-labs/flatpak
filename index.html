@@ -49,18 +49,29 @@
     </div>
   </section>
 
+  <section class="card app">
+    <img src="mangohud-fps-switch-icon.svg" alt="">
+    <div>
+      <h2>MangoHud FPS Switch</h2>
+      <div class="muted">Switch MangoHud's FPS limit with profiles from the tray, also while a game is running.</div>
+      <a class="button" href="org.s3r3nity.MangoHudFPSSwitch.flatpakref">Install MangoHud FPS Switch</a>
+      <a class="button secondary" href="https://github.com/s3r3nity-labs/mangohud-fps-switch">Source code</a>
+    </div>
+  </section>
+
   <section class="card">
     <h3>Installing</h3>
-    <p class="muted">Click <strong>Install Home Sync</strong> and open the downloaded file. Your app store
+    <p class="muted">Click an app's <strong>Install</strong> button and open the downloaded file. Your app store
       (Discover, GNOME Software, …) installs it and adds this repository, so updates arrive
       with your other apps. Or in a terminal:</p>
-    <pre><code>flatpak install --user https://s3r3nity-labs.github.io/flatpak/org.s3r3nity.HomeSync.flatpakref</code></pre>
+    <pre><code>flatpak install --user https://s3r3nity-labs.github.io/flatpak/org.s3r3nity.HomeSync.flatpakref
+flatpak install --user https://s3r3nity-labs.github.io/flatpak/org.s3r3nity.MangoHudFPSSwitch.flatpakref</code></pre>
 
     <h3>Adding the repository only</h3>
     <pre><code>flatpak remote-add --user --if-not-exists s3r3nity-labs https://s3r3nity-labs.github.io/flatpak/s3r3nity-labs.flatpakrepo</code></pre>
 
     <h3>Removing</h3>
-    <pre><code>flatpak uninstall --user org.s3r3nity.HomeSync
+    <pre><code>flatpak uninstall --user org.s3r3nity.HomeSync org.s3r3nity.MangoHudFPSSwitch
 flatpak remote-delete --user s3r3nity-labs</code></pre>
 
     <p class="muted">The repository is signed (key fingerprint
